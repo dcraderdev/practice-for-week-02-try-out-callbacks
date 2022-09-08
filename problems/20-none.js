@@ -28,9 +28,15 @@ let result4 = none([4, -5, 7, -1], function(n) {
 console.log(result4);   // false
 *******************************************************************************/
 
-function none(array, cb) {
-  // Your code here
-}
+
+
+  function none(array, cb) {
+
+    for(let i = 0; i < array.length; i++){
+      if(cb(array[i]) !== false){return false}
+    }
+     return true
+  }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {

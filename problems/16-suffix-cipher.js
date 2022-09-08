@@ -32,7 +32,23 @@ console.log(suffixCipher('incremental progress is very instrumental', cipher2));
 *******************************************************************************/
 
 function suffixCipher(sentence, cipher) {
-  // Your code here
+  let newSent = []
+  let arr  = sentence.split(' ')
+
+  for(let i = 0; i < arr.length; i++){
+    let method1 = cipher.ly
+    let method2 = cipher.ize
+
+    let suffix1 = arr[i].slice(-2)
+    let suffix2 = arr[i].slice(-3)
+
+    // if suffix 1 or 2 mathces key then do value cb to arr[i] and push into new sent
+      console.log(arr[i]);
+    if(cipher[suffix1]){newSent.push(method1(arr[i]))}
+    if(cipher[suffix2]){newSent.push(method2(arr[i]))}
+    if(!cipher[suffix2] && !cipher[suffix1]){newSent.push(arr[i])}
+  }
+  return newSent.join(' ')
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

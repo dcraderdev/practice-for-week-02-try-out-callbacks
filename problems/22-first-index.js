@@ -23,7 +23,13 @@ console.log(result3); // -1
 *******************************************************************************/
 
 function firstIndex(array, cb) {
-  // Your code here
+  let index = 0;
+  
+  for(let i = 0; i < array.length; i++){
+    if(cb(array[i])===true){return i}
+  }
+  
+  return -1
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
