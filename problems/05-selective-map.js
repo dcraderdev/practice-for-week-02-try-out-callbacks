@@ -45,11 +45,10 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 function selectiveMap(array, selector, mapper) {
     let arr = []
     for(let i = 0; i < array.length; i++){
-      if(selector(array[i]) !== true){
-  
-        arr.push(array[i])
-      }else{
+      if(selector(array[i])){
         arr.push(mapper(array[i]))
+      }else{
+        arr.push(array[i])
       }
     }
     return arr
